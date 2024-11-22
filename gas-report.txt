@@ -1,0 +1,69 @@
+No files changed, compilation skipped
+
+Ran 7 tests for test/unit/LetSwapRouterUnit.t.sol:LetSwapRouterTest
+[PASS] testRemoveLiquidity() (gas: 151038)
+[PASS] testSwapETHForExactTokens() (gas: 116696)
+[PASS] testSwapExactETHForTokens() (gas: 109260)
+[PASS] testSwapExactTokensForETH() (gas: 135492)
+[PASS] testSwapExactTokensForTokens() (gas: 147388)
+[PASS] testSwapTokensForExactETH() (gas: 144901)
+[PASS] testSwapTokensForExactTokens() (gas: 156699)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 37.27ms (60.91ms CPU time)
+| src/LetSwapFactory.sol:LetSwapFactory contract |                 |         |         |         |         |
+|------------------------------------------------|-----------------|---------|---------|---------|---------|
+| Deployment Cost                                | Deployment Size |         |         |         |         |
+| 1918629                                        | 8698            |         |         |         |         |
+| Function Name                                  | min             | avg     | median  | max     | # calls |
+| createPair                                     | 1585015         | 1590715 | 1585015 | 1602115 | 21      |
+| feeTo                                          | 2327            | 2327    | 2327    | 2327    | 22      |
+| getPair                                        | 787             | 1569    | 787     | 2787    | 69      |
+
+
+| src/LetSwapPair.sol:LetSwapPair contract |                 |       |        |       |         |
+|------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                          | Deployment Size |       |        |       |         |
+| 0                                        | 0               |       |        |       |         |
+| Function Name                            | min             | avg   | median | max   | # calls |
+| approve                                  | 46256           | 46256 | 46256  | 46256 | 1       |
+| balanceOf                                | 2536            | 2536  | 2536   | 2536  | 1       |
+| getReserves                              | 4476            | 4476  | 4476   | 4476  | 27      |
+
+
+| src/LetSwapRouter.sol:LetSwapRouter contract |                 |        |        |        |         |
+|----------------------------------------------|-----------------|--------|--------|--------|---------|
+| Deployment Cost                              | Deployment Size |        |        |        |         |
+| 3343980                                      | 15914           |        |        |        |         |
+| Function Name                                | min             | avg    | median | max    | # calls |
+| addLiquidity                                 | 260133          | 260133 | 260133 | 260133 | 7       |
+| addLiquidityETH                              | 262448          | 262448 | 262448 | 262448 | 14      |
+| removeLiquidity                              | 111283          | 111283 | 111283 | 111283 | 1       |
+| swapETHForExactTokens                        | 110183          | 110183 | 110183 | 110183 | 1       |
+| swapExactETHForTokens                        | 103023          | 103023 | 103023 | 103023 | 1       |
+| swapExactTokensForETH                        | 114654          | 114654 | 114654 | 114654 | 1       |
+| swapExactTokensForTokens                     | 100045          | 100045 | 100045 | 100045 | 1       |
+| swapTokensForExactETH                        | 119325          | 119325 | 119325 | 119325 | 1       |
+| swapTokensForExactTokens                     | 104650          | 104650 | 104650 | 104650 | 1       |
+
+
+| src/test/ERC20Mock.sol:ERC20Mock contract |                 |       |        |       |         |
+|-------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                           | Deployment Size |       |        |       |         |
+| 649401                                    | 3206            |       |        |       |         |
+| Function Name                             | min             | avg   | median | max   | # calls |
+| approve                                   | 29160           | 42703 | 46572  | 46572 | 18      |
+| balanceOf                                 | 562             | 780   | 562    | 2562  | 55      |
+
+
+| src/test/MockWETH.sol:MockWETH contract |                 |       |        |       |         |
+|-----------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                         | Deployment Size |       |        |       |         |
+| 575144                                  | 2556            |       |        |       |         |
+| Function Name                           | min             | avg   | median | max   | # calls |
+| approve                                 | 46467           | 46467 | 46467  | 46467 | 7       |
+| balanceOf                               | 541             | 541   | 541    | 541   | 25      |
+| deposit                                 | 44978           | 44978 | 44978  | 44978 | 7       |
+
+
+
+
+Ran 1 test suite in 39.16ms (37.27ms CPU time): 7 tests passed, 0 failed, 0 skipped (7 total tests)

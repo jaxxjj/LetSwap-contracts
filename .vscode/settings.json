@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "cursor.general.disableHttp2": true,
+  "cursor.cpp.enablePartialAccepts": true
+}
